@@ -1,0 +1,258 @@
+body {
+  margin: 0;
+  font-family: 'DINPro', sans-serif;
+}
+
+@font-face {
+  font-family: 'DINPro';
+  src: url('DINPro-Regular.otf') format('opentype');
+}
+
+#Capa_1{
+  height: 90%;
+  width: 90%;
+}
+.close-buton {
+
+    position: absolute;
+
+    top: 25px;
+    right: 25px;
+
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+
+
+    border: none;
+    border-radius: 50%;
+
+    background: transparent;
+
+    font-size: 30px;
+
+    cursor: pointer;
+
+    color: #111;
+}
+
+
+ /*HOOVERS*/
+
+.close-buton:hover {
+  background-color: #e74c3c;
+  color: #fff;
+}
+/*hoovers y colores y cosas aulas*/
+
+[id^="aula-"] {
+   cursor: pointer;
+   transition: fill 0.25s ease, stroke-width 0.25s ease;
+}
+
+[id^="aula-AS"]:hover {
+   fill: #e71e73;
+   stroke-width: 7;
+}
+
+[id^="aula-A"]:hover {
+   fill: #e71e73;
+   stroke-width: 7;
+}
+
+[id^="aula-N"]:hover {
+   fill: #FDC25B;
+   stroke-width: 7;
+}
+
+ /*CAMBIO DE PLANTA*/
+
+[id^="ir-planta"]{
+  cursor: pointer;
+  transition: fill 0.25s ease, stroke-width 0.25s ease;
+}
+
+[id^="ir-planta"]:hover {
+    fill:#FDC25B;
+    stroke-width: 7;
+}
+
+.plano{
+  display: none;
+}
+
+.plano.activo{
+  display: block;
+}
+
+#planta0{
+
+}
+.map-app{
+
+  width: 60vw;
+  height: 95vh;
+  display:flex;
+
+  position: relative;
+}
+/*SIDEBAR DRCH E IZQ*/
+
+.sidebar{
+  width: 360px;
+  height: 110vh;
+  margin:0px ;
+
+  background: #ffeecc;
+
+  border-right: 1px solid #ddd;
+
+  position: fixed;
+
+  z-index: 20;
+
+  transform: translateX(-110%);
+
+  transition: transform 0.35s ease;
+
+  flex-shrink: 0;
+}
+
+.sidebar2{
+  width: 360px;
+  height: 100vh;
+  background: #ffeecc;
+
+  border-right: 1px solid #ddd;
+
+  position: fixed;
+
+  z-index: 20;
+
+  transform: translateX(2000%);
+
+  transition: transform 0.35s ease;
+
+  flex-shrink: 0;
+}
+
+.sidebar.open{
+  transform: translateX(0);
+}
+.sidebar2.open{
+  transform: translateX(332%);
+}
+
+
+.map-container{
+  flex: 1;
+  margin-left: 300px;
+  
+
+  position: relative;
+
+  overflow: hidden;
+
+  display: flex;
+
+  align-items: flex-end;
+
+  justify-content: center;
+
+  transform: translateX(150px);
+  h1 { padding-left: 20px;}
+}
+
+ /*PLANTA 1 NORMAS*/
+
+.cls-1 {
+  fill: #706f6f;
+}
+
+.cls-2 {
+  stroke-width: 7.56px;
+}
+
+.cls-2, .cls-3, .cls-4, .cls-5 {
+  fill: none;
+  stroke: #706f6f;
+}
+
+.cls-2, .cls-5 {
+  stroke-linejoin: round;
+}
+
+.cls-3 {
+  stroke-width: 6.53px;
+}
+
+.cls-3, .cls-4 {
+  stroke-miterlimit: 10;
+}
+
+.cls-6 {
+  fill: #888887;
+}
+
+.cls-7 {
+  fill: #c0bcbc;
+}
+
+.cls-4, .cls-5 {
+  stroke-width: 7.45px;
+}
+
+
+/*SOTANO NORMAS*/
+  .norma-1 {
+    fill: #706f6f;
+  }
+
+  .norma-2 {
+    fill: #888887;
+  }
+
+  .norma-3 {
+    fill: #c0bcbc;
+  }
+
+  .norma-4, .norma-5 {
+    stroke-linejoin: round;
+  }
+
+  .norma-4, .norma-5, .norma-6, .norma-7 {
+    fill: none;
+    stroke: #706f6f;
+  }
+
+  .norma-4, .norma-6 {
+    stroke-width: 7.43px;
+  }
+
+  .norma-5 {
+    stroke-width: 7.54px;
+  }
+
+  .norma-6, .norma-7 {
+    stroke-miterlimit: 10;
+  }
+
+  .norma-7 {
+    stroke-width: 6.51px;
+  }
+/*FOTOS*/
+.foto {
+  width: 320px;
+  height: 320px;
+  object-fit: cover;
+  display: block;
+  margin: 20px;
+  border-radius: 8px;
+}
+
+.foto.oculta {
+  display: none;
+}
